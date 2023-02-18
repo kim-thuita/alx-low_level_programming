@@ -1,12 +1,10 @@
 #include <stdio.h>
 
-/*if we may include other headers */
-
 /**
-*main- Entry point
-*
-Return:0 (success)
-*/
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
 
