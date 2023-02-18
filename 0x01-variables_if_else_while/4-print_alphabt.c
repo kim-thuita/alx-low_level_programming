@@ -1,26 +1,35 @@
 #include <stdio.h>
+
 /*if we may include other headers */
 
 /**
 *main -Entry point
 *
 */
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+
+
 int main(void)
 {
-       char c;
 
-          for (c = 'a'; c <= 'z'; c++)
-          {
-                  if(c != 'q' && c != 'e')
-                  {
-                      putchar(c);
+	char n;
 
-                  }
-                   else
-                  {
-                      continue;
-                  }
-          }
-	  putchar('\n');
-          return (0);
- }
+	for (n = 'a'; n <= 'z'; n++)
+
+	{
+		if (n == 'e' || n == 'q')
+
+			continue;
+
+		putchar(n);
+	}
+	putchar('\n');
+
+	return (0);
+}
+
