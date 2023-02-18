@@ -7,19 +7,21 @@
 */
 int main(void)
 {
-	int a, b, c;
 
-	for (a = 48; a <= 59; a++)
+	/* Lowercase Alphabet */
+	int i, j, k;
+
+	for (i = 48; i <= 57; i++)
 	{
-		for (b = 48 + 1; b <= 59; b++)
+		for (j = i + 1; j <= 57; j++)
 		{
-			for (c = 48 + 1; c <= 59; c++)
+			for (k = j + 1; k <= 57; k++)
 			{
-				putchar(a);
-				putchar(b);
-				putchar(c);
+				putchar(i);
+				putchar(j);
+				putchar(k);
 
-				if ((char)a != '7' || (char)b != '8' || (char)c != '9')
+				if ((char)i != '7' || (char)j != '8' || (char)k != '9')
 				{
 					putchar(',');
 					putchar(' ');
@@ -27,6 +29,8 @@ int main(void)
 			}
 		}
 	}
+
 	putchar('\n');
+
 	return (0);
 }
