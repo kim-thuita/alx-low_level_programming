@@ -1,9 +1,13 @@
 #include "main.h"
 
 /**
-*print_sign - check code
+*print_sign - Entry point
 *
-*return:0 (success)
+Description: check whether a is lowercase
+*
+@n: integer value to check and return its sign
+*
+*return: 1, 0, or -1
 */
 int print_sign(int n)
 {
