@@ -1,23 +1,13 @@
- #include "main.h"
-
+#include "main.h"
 /**
- *_abs - Serves as the point
- *
- *Description: Return the absolute value of an integer
- *
- *@a: integer value to check and return its sign
- *Return: 1, 0, or -1
+ * _abs - check the code.
+ * @r: an input integer.
+ * Return: absolute value.
  */
-
-int _abs(int a)
+int _abs(int r)
 {
-	if (a > 0)
-	{
-		return (a);
-	}
+	if (r >= 0)
+		return (r);
 	else
-	{
-		(a * - 1);
-	}
-
+		return (r * -1);
 }
