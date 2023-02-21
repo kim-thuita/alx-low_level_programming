@@ -1,6 +1,6 @@
 #include "main.h"
-/**
 
+/**
  * print_sign - Entry Point
  *
  * Description: Check whether a letter is lowercase
