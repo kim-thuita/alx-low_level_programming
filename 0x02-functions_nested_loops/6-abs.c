@@ -21,7 +21,7 @@ int _abs(int a)
 	}
 	else
 	{
-		(-1 * n);
+		(-1 * a);
 	}
 
 }
