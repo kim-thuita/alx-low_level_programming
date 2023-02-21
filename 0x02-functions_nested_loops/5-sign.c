@@ -1,14 +1,15 @@
 #include "main.h"
-
 /**
-*print_sign - Entry point
-*
-Description: check whether a is lowercase
-*
-@n: integer value to check and return its sign
-*
-*return: 1, 0, or -1
-*/
+
+ * print_sign - Entry Point
+ *
+ * Description: Check whether a letter is lowercase
+ *
+ * @n: integer value to check and return its sign
+ *
+ * Return: 1, 0, or -1
+ */
+
 int print_sign(int n)
 {
 	if (n > 0)
