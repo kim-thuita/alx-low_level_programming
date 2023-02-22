@@ -1,21 +1,22 @@
 #include <stdio.h>
 
 /**
-*main- Entry point
-*
-*Return: 0 (success)
-*/
+ * main - Prints the sum of all multiples of 3 or 5 up to 102
+ * Return: Always (Success)
+ */
 int main(void)
 {
-	int a;
+	int i;
 	int x;
-
-	for (a = 0; a < 1024; a++)
+	
+	for (i = 0; i < 1024; i++)
 	{
-
-		if ((a % 3 == 0) && (a % 5 == 0))
-				x += a;
+		if ((i % 3 == 0) && (i % 5 == 0))
+		{
+			x += i;
+		}
 	}
-	printf("%d\n", );
-	return(0);
+	printf("%d\n", x);
+	return (0);
 }
+
