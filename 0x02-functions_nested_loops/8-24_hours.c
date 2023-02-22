@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *jack _bauer- Entry point
+ *jack _bauer - Entry point
  *
  *Description: Nested Looping
  *
@@ -9,7 +9,7 @@
  */
 void jack_bauer(void)
 {
-	int a,b,c,d;
+	int a, b, c, d;
 
 	for (a = 48; a <= 50; a++)
 	{
