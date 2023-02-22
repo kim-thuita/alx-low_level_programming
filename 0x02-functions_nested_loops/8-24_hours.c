@@ -1,11 +1,9 @@
 #include "main.h"
 
 /**
- *jack _bauer - Entry point
+ * jack_bauer - Prints the minutes of a day
  *
- *Description: Nested Looping
- *
- *Return: void
+ * Return: no return
  */
 void jack_bauer(void)
 {
