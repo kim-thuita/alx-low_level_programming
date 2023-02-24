@@ -5,7 +5,8 @@
  *
  * Return: void
  */
-void maore_numbers(void)
+
+void more_numbers(void)
 {
 	int count, i, ones, tens;
 
