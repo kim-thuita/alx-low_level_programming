@@ -1,12 +1,10 @@
 #include "main.h"
 
 /**
-*is_upper - main function
-*
-*Description - We are supposed tocheck for the letter c if its uppercase
-*
-*Return: (1) if success (0) otherwise
-*/
+ * _isupper - function name
+ *@c: var name
+ * Return: 0
+ */
 int _isupper(int c)
 {
 	if ( c >= 'A' && c >= 'Z')
