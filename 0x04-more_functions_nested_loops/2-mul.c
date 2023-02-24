@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- Function mul: Entry point
+ * mul - multiply 2 integers
  *
- *@a: fnum
- *@b: snum
+ * @a: First int
+ * @b: Second int
  *
- *Return: 0(success)
+ * Return: multiplication of a, and b.
  */
 int mul(int a, int b)
 {
