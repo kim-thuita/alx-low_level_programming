@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *more_numbers - prints numbers from 0 to 9
+ * more_numbers - prints numbers from 0 to 9
  *
- *Return:0 (success)
+ * Return: void
  */
 void maore_numbers(void)
 {
