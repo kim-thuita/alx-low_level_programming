@@ -1,19 +1,21 @@
 #include "main.h"
 
 /**
- *_puts- function that prints a string
+ * _puts - Entry Point
  *
- @str:pointer - char array
+ * Description: prints a string
+ * @str: string - char array
  *
- *Return: void
+ * Return: void
  */
+
 void _puts(char *str)
 {
+	int len = 0;
 
-	while (*str != '\0')
+	while (str[len] != '\0')
 	{
-		_putchar(*str);
-
-		str = str + 1;
+		_putchar(str[len++]);
 	}
+	_putchar('\n');
 }
