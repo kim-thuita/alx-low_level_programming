@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- *rev_string: Entry point to reverse a atring
- *Descriptio: Reverse a string
- *@s: number to be checked
+ * rev_string - Entry Point
  *
- *Description: Using pointers to reverse a string
+ * Description: replace a string with its reverse
+ * @str: string - char array
  *
- *Return:void
+ * Return: void
  */
+
 void rev_string(char *s)
 {
 
