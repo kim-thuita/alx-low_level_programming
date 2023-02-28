@@ -7,19 +7,21 @@
  *
  * Return: void
  */
-
-void rev_string(char *s)
+void rev_string(char *str)
 {
+	int len, i;
+	char temp;
 
-	char *r_ptr = str;
+	len = 0;
+	i = 0;
 
-	while (*(r_ptr + 1) != '\0')
-		r_ptr++;
+	while (str[len] != '\0')
+		len++;
 
-	while (r_ptr > str)
+	for (i = 0; i < len / 2; i++)
 	{
-		char tmp = *r_ptr;
-		*r_ptr-- = *str;
-		*str++ = tmp
+		temp = str[i];
+		str[i] = str[len - i - 1];
+		str[len - i - 1] = temp;
 	}
 }
