@@ -1,33 +1,23 @@
 #include "main.h"
 /**
- * leet - Entry Point
- *
- * Description: Cypher Code :)
- * @str: string to change encode
- *
- * Return: pointer to string
- */
+* leet - function that encode a string
+*@str:string that will be encoded
+*Return:returns encoded string
+*/
 
 char *leet(char *str)
 {
-	char *ptr = str;
-	int i;
-	char sub[] = {'A', 'E', 'O', 'T', 'L'};
-	char code[] = {'4', '3', '0', '7', '1'};
+	int index1 = 0, index2;
+	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-	while (*str != '\0')
+	while (str[++index1])
 	{
-		for (i = 0; i < 5; i++)
+		for (index2 = 0; index2 <= 7; index2++)
 		{
-			printf("%c, %c\n", *str, *str + 32);
-			if ((*str == sub[i]) || ((*str - 32) == sub[i]))
-			{
-				*str = code[i];
-				break;
-			}
+			if (str[index1] == leet[index2] ||
+			 str[index1] - 32 == leet[index2])
+				str[index1] = index2 + '0';
 		}
-		str++;
 	}
-
-	return (ptr);
+	return (str);
 }
