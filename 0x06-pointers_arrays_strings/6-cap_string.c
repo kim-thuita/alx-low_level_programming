@@ -1,9 +1,10 @@
 #include "main.h"
+
 /**
-*cap_string - function that capitalize first character of a word
-*@str: string to capitalize
-*Return:returns the capitalized string
-*/
+ * cap_string - capitalize all words of a string
+ * @str: string
+ * Return: `str`
+ */
 char *cap_string(char *str)
 {
 	int i, c;
@@ -21,6 +22,7 @@ char *cap_string(char *str)
 		}
 
 		if (trigger)
+
 		{
 			if (str[i] > 96 && str[i] < 123)
 			{
@@ -31,7 +33,9 @@ char *cap_string(char *str)
 				trigger = 0;
 			else if (str[i] > 47 && str[i] < 58)
 				trigger = 0;
+			}
 		}
-	}
+		return (str);
+}
 	return (str);
 }
