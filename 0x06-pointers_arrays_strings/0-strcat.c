@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- *_strcat - Entry point
+ * _strcat - Entry Point
  *
- *Description: concatinate 2 strings
- *@s1: first string
- *@s2: second string
+ * Description: concatenate 2 strings
+ * @s1: first string
+ * @s2: 2nd string
  *
- *Return: void
+ * Return: void
  */
 
 
