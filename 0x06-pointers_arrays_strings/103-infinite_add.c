@@ -19,15 +19,9 @@ void rev_string(char *n)
 
 	for (j = 0; j < i; j++, i--)
 	{
-
-		num = *(n1 - '0') + tens;
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10;
-
 		temp = *(n + j);
 		*(n + j) = *(n + i);
 		*(n + i) = temp;
-
 	}
 }
 
@@ -54,13 +48,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		return (0);
 	while (j >= 0 || i >= 0 || overflow == 1)
 	{
-
-		num = (*n2 - '0') + tens;
-		*(r + r_index) = (num % 10) + '0';
-	       tens = num / 10;
-	}
-
-
 		if (i < 0)
 			val1 = 0;
 		else
@@ -87,5 +74,4 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	*(r + digits) = '\0';
 	rev_string(r);
 	return (r);
-
 }
