@@ -1,41 +1,36 @@
 #include "main.h"
 
 /**
- * cap_string - capitalize all words of a string
- * @str: string
- * Return: `str`
+ * cap_string - Entry Point
+ *
+ * Description: Capatalize words
+ * Separators are (, ; . ! ? \" ( ) { } and space)
+ * @str: string to change
+ *
+ * Return: pointer to string
  */
+
 char *cap_string(char *str)
 {
-	int i, c;
-	int trigger;
-	char nots[] = ",;.!?(){}\n\t\" ";
+	char *ptr = str;
 
-	for (i = 0, trigger = 0; str[i] != '\0'; i++)
+	while (*str != '\0')
 	{
-		if (str[0] > 96 && str[0] < 123)
-			trigger = 1;
-		for (c = 0; nots[c] != '\0'; c++)
-		{
-			if (nots[c] == str[i])
-				trigger = 1;
-		}
 
-		if (trigger)
-
+		while ((int)*str == 32 || (int)*str == 44
+				|| (int)*str == 59 || (int)*str == 46
+				|| (int)*str == 33 || (int)*str == 63
+				|| (int)*str == 34 || (int)*str == 40
+				|| (int)*str == 41 || (int)*str == 9
+				|| (int)*str == 123 || (int)*str == 125
+				|| (int)*str == 10)
 		{
-			if (str[i] > 96 && str[i] < 123)
-			{
-				str[i] -= 32;
-				trigger = 0;
-			}
-			else if (str[i] > 64 && str[i] < 91)
-				trigger = 0;
-			else if (str[i] > 47 && str[i] < 58)
-				trigger = 0;
-			}
+			str++;
+			if (*str <= 'z' && *str >= 'a')
+				*str -= 32;
 		}
-		return (str);
-}
-	return (str);
+		str++;
+	}
+
+	return (ptr);
 }
