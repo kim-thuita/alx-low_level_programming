@@ -1,6 +1,13 @@
 #ifndef MAIN_H
 #define MAIN_H
-/* functions prototypes (declarations of functions) */
+
+/*
+ * File: main.h
+ * Auth: kevin
+ * Desc: Header file contaning the prototypes of all functions
+ *	included in the static library libmy.a
+ */
+
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);

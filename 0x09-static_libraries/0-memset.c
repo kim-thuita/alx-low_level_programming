@@ -1,20 +1,26 @@
-#include"main.h"
+#include "main.h"
+
 /**
-* Description :fills the first n bytes of the memory area pointed to by string with a constant byte b.
-* @s : string
-* @b : the replaced char
-* @n : length filled in the memory
-* return: char
-*/
+ * _memset - Entry Point
+ *
+ * Description: Copies the character c to the first
+ * n characters of the string str
+ * @s: string to copy into
+ * @b: character to copy
+ * @n: how many times to copy c
+ *
+ * Return: void
+ */
+
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i = 0;
+	char *p = s;
 
-	while ( 1 < n)
+	while (n--)
 	{
-		*( s + i ) = b;
-		i++;
+		*s++ = b;
 	}
 
-	return (s);
-} 
+	return (p);
+}
+

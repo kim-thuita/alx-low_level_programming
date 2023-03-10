@@ -1,23 +1,28 @@
 #include "main.h"
-/**
- * _strchr - locates a character in a string
- * @s: string
- * @c: char
- * Return: char
- */
-char *_strchr(char *s, char c)
-{
-	int i = 0;
+#include <stdlib.h>
 
-	while (*(s + i) != '\0')
-	{
-		if (*(s + i) == c)
-			return (s + i);
-		i++;
-	}
-	/* Check if the c is null byte */
-	if (c == '\0')
-		return (s + i);
-	else
-		return (0);
+/**
+ * _strchr - Entry Point
+ *
+ * Description: Searches for the first occurances of the character c
+ * in the string str
+ * @str: string to search in
+ * @c: charcater to search for
+ *
+ * Return: void
+ */
+
+char *_strchr(char *str, char c)
+{
+	char *flag = NULL;
+
+	do {
+		if (*str == c)
+		{
+			flag = str;
+			break;
+		}
+	} while (*str++);
+
+	return (flag);
 }

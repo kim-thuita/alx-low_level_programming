@@ -1,32 +1,27 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- * _atoi - just empty file
- * @s: char
- * Return: 1 if is digit, otherwise 0
+ * _atoi - Entry Point
+ *
+ * Description: prints elemnts of array unti n
+ * @s: array
+ *
+ * Return: void
  */
+
 int _atoi(char *s)
 {
-	short boolean;
-	int i, minus, result;
+	int num, i;
 
-	i = minus = result = boolean = 0;
-	minus = -1;
+	num = 0;
+	i = 0;
 
-	while (s[i] != '\0')
+	while (s[i] && (s[i] >= '0' && s[i] <= '9'))
 	{
-		if (s[i] == '-')
-			minus *= -1;
-
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			result *= 10;
-			result -= (s[i] - '0');
-			boolean = 1;
-		}
-		else if (boolean == 1)
-			break;
+		num = num * 10 + (s[i] - '0');
 		i++;
 	}
-	result *= minus;
-	return (result);
+
+	return (num);
 }
