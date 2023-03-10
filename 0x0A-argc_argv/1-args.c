@@ -6,6 +6,7 @@
  *@argc: arguement count
  *@argv: arguement vector
  *prints number of arguements passed to it
+ *Return: 1
  */
 
 int main(int argc, char *argv[])
@@ -14,6 +15,6 @@ int main(int argc, char *argv[])
 
 	printf("%d\n", argc - 1);
 
-	return(0);
+	return (0);
 }
 
