@@ -2,18 +2,19 @@
 #include <stdlib.h>
 
 /**
- * main - count change coins in an amount
- * change in EG are 1, 5, 10, 25, 50
+ *main - count change coins in an amount
+ *change in EG are 1,5,10,25,50
  *
- * @argc: count of commands/arguments
- * @argv: array of commands/arguments
+ *@argc:count of commands/arguements
+ *@argv: array of commands/arguements
  *
- * Return: Alawys 0.
+ *Return: Always 0
  */
 
 int main(int argc, char *argv[])
 {
 	int amount, counter, i;
+
 	int change[5] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
@@ -30,6 +31,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
+
 		counter = 0;
 
 		while (amount > 0)
@@ -38,6 +40,7 @@ int main(int argc, char *argv[])
 			{
 				while (amount / change[i] > 0 && amount != 0)
 				{
+
 					amount -= change[i];
 					counter++;
 				}
@@ -45,9 +48,7 @@ int main(int argc, char *argv[])
 					break;
 			}
 		}
-
 		printf("%d\n", counter);
 	}
-
 	return (0);
 }
