@@ -1,21 +1,18 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- *main - count change coins in an amount
- *change in EG are 1,5,10,25,50
- *
- *@argc:count of commands/arguements
- *@argv: array of commands/arguements
- *
- *Return: Always 0
+ *main - print the min number of coins to make change for an amount of money
+ *@argc: arguement count
+ *@argv: arguement vector, array of strings
+ *Return: 1 if error, 0 otherwise
  */
-
 int main(int argc, char *argv[])
 {
-	int amount, counter, i;
-
-	int change[5] = {25, 10, 5, 2, 1};
+	int total, count;
+	unsigned int i;
+	char *p;
+	int cents[] = {25, 10, 5, 2};
 
 	if (argc != 2)
 	{
@@ -23,32 +20,31 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	amount = atoi(argv[1]);
+	total = strtol(argv[1], &p, 10);
+	count = 0;
 
-	if (amount < 0)
+	if (!*p)
 	{
-		printf("%d\n", 0);
+		while (total > 1)
+		{
+			for (i = 0; i < sizeof(cents[i]); i++)
+			{
+				if (total >= cents[i])
+				{
+					count += total / cents[i];
+					total = total % cents[i];
+				}
+			}
+		}
+		if  (total == 1)
+			count++;
 	}
 	else
 	{
-
-		counter = 0;
-
-		while (amount > 0)
-		{
-			for (i = 0; i < 5; i++)
-			{
-				while (amount / change[i] > 0 && amount != 0)
-				{
-
-					amount -= change[i];
-					counter++;
-				}
-				if (amount <= 0)
-					break;
-			}
-		}
-		printf("%d\n", counter);
+		printf("Error\n");
+		return (1);
 	}
+
+	printf("%d\n", count);
 	return (0);
 }
