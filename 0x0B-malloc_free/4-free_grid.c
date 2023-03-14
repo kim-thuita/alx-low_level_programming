@@ -1,17 +1,14 @@
 #include "main.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 /**
- *free_grid - free up a 2d grid
- *Description: Print out a 2D array
- *@grid: double pinter 2d grid
- *@height: height of the grid
+ * free_grid - free up a 2d grid
+ * @grid: double pointer 2d grid
+ * @height: height of grid
  */
-
 void free_grid(int **grid, int height)
 {
-
-	int a;
+	int i;
 
 	for (i = 0; i < height; i++)
 		free(grid[i]);
