@@ -2,17 +2,14 @@
 #include <stdlib.h>
 
 /**
- *str_concat - concatenates two string using malloc
- *@s1: represents the first string
- *@s2: represents the second string
- *Return:pointer to concat string
+ * str_concat - concatenate two strings using malloc
+ * @s1: string 1
+ * @s2: string 2
+ * Return: pointer to concat string
  */
-
 char *str_concat(char *s1, char *s2)
 {
-
 	char *a;
-
 	int i, j, c, d;
 
 	if (s1 == NULL)
@@ -25,11 +22,11 @@ char *str_concat(char *s1, char *s2)
 	for (j = 0; s2[j] != '\0'; j++)
 		;
 
-	a = maolloc((i * sizeof(*s1)) + (j * sizeof(*s2)) + 1);
+	a = malloc((i * sizeof(*s1)) + (j * sizeof(*s2)) + 1);
 	if (a == NULL)
 		return (NULL);
 
-	for (c = 0; d = 0; c < (i + j + 1); c++)
+	for (c = 0, d = 0; c < (i + j + 1); c++)
 	{
 		if (c < i)
 			a[c] = s1[c];
